@@ -17,7 +17,7 @@ export default function Page() {
           <div className={styles.shape} />
           <p className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}>Parrafo con Lusitana</p>
           <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
-            <strong>Titulo de la Pagina</strong>
+            <strong>Titulo de la Pagina Principal</strong>
             Texto del parrafo fuera de otro elemento -{' Texto dentro de comillas simples '}-{" Texto dentro de comillas dobles"}
             <br/>
             <a href="https://nextjs.org/learn/" className="text-blue-500">
