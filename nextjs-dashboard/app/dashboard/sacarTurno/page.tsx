@@ -1,11 +1,10 @@
 'use client';
 import Head from 'next/head';
 import Escudo from '@/app/ui/escudoParana';
-import styles from './ui/Home.module.css';
+import styles from '../../ui/Home.module.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from 'react';
 import { useEffect } from 'react';
-import LogoMuni from './ui/logoMuni';
 
 export default function Page() {  
 
@@ -21,36 +20,37 @@ export default function Page() {
             setTextDni(38054313),
             setUsuario("PETRAGLIA FRANCO");
         }
-          {/* <Head>
-            revisar por qué no me lo muestra como foto y titulo de pestaña
-             ahora me muestra localhost:3000/dashboard/listaTurnos 
-            <title>Listado de Turnos</title>
-            <Escudo />
-            </Head> */} 
-
+  
     return (
       
-      <div >
-
-        <header className={styles.header}>
-          <LogoMuni />
-          <h1 className={styles.title}>
-            Registro de Conducir
-          </h1>
-            <div className="btn-group">
-              <button type="button" className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                {textUsuario}
-              </button>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Perfil</a></li>
-                <li><a className="dropdown-item" href="#">Tramites</a></li>
-                <li><a className="dropdown-item" href="#">Cerrar Sesion</a></li>
-              </ul>
-            </div>            
-            <div className={styles.lineaAzul}></div>
-        </header>
-
+      <div className={styles.body}>
+        <Head>
+            {/*revisar por qué no me lo muestra como foto y titulo de pestaña*/}
+            {/* ahora me muestra localhost:3000/dashboard/listaTurnos */}
+          <title>Listado de Turnos</title>
+          <Escudo />
+        </Head>
+  
         <main className={styles.body}>
+          <nav className={styles.nav}>
+              <h1 className={styles.titulo}>Registro de Conducir</h1>
+              
+              <div className="dropdown">
+            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" aria-expanded="false">
+            {textUsuario}
+            </button>
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            </ul>
+      </div>
+              
+          </nav>
+          <div className={styles.lineaAzul}>
+                  
+          </div>
+          <br />
           
           <div className='container-lg '>
           <button className={`m-3 ${styles.botones}`}>Nuevo tramite</button>
